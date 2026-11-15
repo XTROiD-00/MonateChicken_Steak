@@ -16,7 +16,6 @@ import com.example.monatechickensteak.data.ReviewRepository
 import com.example.monatechickensteak.databinding.FragmentItemDetailBinding
 import com.example.monatechickensteak.databinding.ItemReviewBinding
 import com.example.monatechickensteak.model.FoodItem
-import com.example.monatechickensteak.util.FoodImages
 import com.example.monatechickensteak.util.toRand
 import com.google.android.material.snackbar.Snackbar
 import java.util.Locale
@@ -71,7 +70,6 @@ class ItemDetailFragment : Fragment() {
                 return@launch
             }
             food = item
-            FoodImages.bind(binding.ivPhoto, binding.tvEmoji, item)
             binding.tvCategory.text = item.category
             binding.tvName.text = item.name
             binding.tvPrice.text = item.price.toRand()
@@ -112,7 +110,6 @@ class ItemDetailFragment : Fragment() {
         if (reviews.isEmpty()) {
             val empty = TextView(requireContext())
             empty.text = "Be the first to review this item from Profile > Reviews & ratings."
-            empty.setTextColor(ContextCompat.getColor(requireContext(), R.color.monate_muted))
             binding.reviewsContainer.addView(empty)
             return
         }
