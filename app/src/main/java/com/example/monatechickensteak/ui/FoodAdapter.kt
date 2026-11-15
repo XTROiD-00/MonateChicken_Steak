@@ -7,10 +7,12 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.monatechickensteak.databinding.ItemFoodBinding
 import com.example.monatechickensteak.model.FoodItem
+import com.example.monatechickensteak.util.FoodImages
 import com.example.monatechickensteak.util.toRand
 
 class FoodAdapter(
-    private val onAdd: (FoodItem) -> Unit
+    private val onAdd: (FoodItem) -> Unit,
+    private val onOpen: (FoodItem) -> Unit
 ) : ListAdapter<FoodItem, FoodAdapter.VH>(Diff) {
 
     class VH(val binding: ItemFoodBinding) : RecyclerView.ViewHolder(binding.root)
@@ -21,12 +23,13 @@ class FoodAdapter(
     override fun onBindViewHolder(holder: VH, position: Int) {
         val item = getItem(position)
         with(holder.binding) {
-            tvEmoji.text = item.emoji
+            FoodImages.bind(ivPhoto, tvEmoji, item)
             tvCategory.text = item.category
             tvName.text = item.name
             tvDescription.text = item.description
             tvPrice.text = item.price.toRand()
             btnAdd.setOnClickListener { onAdd(item) }
+            root.setOnClickListener { onOpen(item) }
         }
     }
 

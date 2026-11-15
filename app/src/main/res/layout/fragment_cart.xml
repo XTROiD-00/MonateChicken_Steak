@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -18,6 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="🛒"
+            android:fontFamily="serif"
             android:textSize="64sp" />
 
         <TextView
@@ -25,16 +27,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Your cart is empty"
-            android:textColor="@color/monate_charcoal"
+            android:textColor="@color/monate_text"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:fontFamily="serif" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Looks like you haven't added anything yet."
-            android:textColor="@color/monate_grey"
+            android:textColor="@color/monate_muted"
             android:textSize="14sp" />
 
         <com.google.android.material.button.MaterialButton
@@ -59,12 +61,19 @@
             android:padding="16dp">
 
             <TextView
+                style="@style/Monate.Eyebrow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="YOUR ORDER" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:text="Your Cart"
-                android:textColor="@color/monate_red"
+                android:textColor="@color/monate_text"
                 android:textSize="26sp"
-                android:textStyle="bold" />
+                android:fontFamily="serif" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvCart"
@@ -76,10 +85,7 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="2dp"
-                app:strokeWidth="0dp">
+                android:layout_marginTop="8dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -91,9 +97,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Order summary"
-                        android:textColor="@color/monate_charcoal"
+                        android:textColor="@color/monate_text"
                         android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:fontFamily="serif" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -106,13 +112,13 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Subtotal"
-                            android:textColor="@color/monate_grey" />
+                            android:textColor="@color/monate_muted" />
 
                         <TextView
                             android:id="@+id/tvSubtotal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/monate_charcoal" />
+                            android:textColor="@color/monate_text" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -126,13 +132,13 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Delivery fee"
-                            android:textColor="@color/monate_grey" />
+                            android:textColor="@color/monate_muted" />
 
                         <TextView
                             android:id="@+id/tvDelivery"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/monate_charcoal" />
+                            android:textColor="@color/monate_text" />
                     </LinearLayout>
 
                     <View
@@ -140,7 +146,7 @@
                         android:layout_height="1dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
-                        android:background="@color/monate_light_grey" />
+                        android:background="@color/monate_divider" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -152,7 +158,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TOTAL"
-                            android:textColor="@color/monate_charcoal"
+                            android:textColor="@color/monate_text"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -160,13 +166,13 @@
                             android:id="@+id/tvTotal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/monate_red"
+                            android:textColor="@color/monate_accent_text"
                             android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:fontFamily="serif" />
                     </LinearLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        style="@style/Widget.Monate.TextInputLayout.Dropdown"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
@@ -184,7 +190,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="Payment method"
-                        android:textColor="@color/monate_charcoal"
+                        android:textColor="@color/monate_text"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -229,8 +235,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:gravity="center"
-                        android:text="🔒 Secure checkout"
-                        android:textColor="@color/monate_grey"
+                        android:text="Secure checkout"
+                        android:textColor="@color/monate_muted"
                         android:textSize="12sp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>

@@ -1,31 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <TextView
+        style="@style/Monate.Eyebrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:text="FLAME-GRILLED DAILY" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
         android:text="Our Menu"
-        android:textColor="@color/monate_red"
+        android:textColor="@color/monate_text"
         android:textSize="26sp"
-        android:textStyle="bold" />
+        android:fontFamily="serif" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Flame-grilled chicken, steak, wings, sides and more"
-        android:textColor="@color/monate_grey"
+        android:textColor="@color/monate_muted"
         android:textSize="13sp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilSearch"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        style="@style/Widget.Monate.TextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -76,8 +85,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="No items match your search 🍽️"
-            android:textColor="@color/monate_grey"
+            android:text="No items match your search"
+            android:textColor="@color/monate_muted"
             android:textSize="16sp"
             android:visibility="gone" />
     </FrameLayout>

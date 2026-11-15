@@ -6,10 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp"
     android:clickable="true"
-    android:focusable="true"
-    app:cardCornerRadius="14dp"
-    app:cardElevation="1dp"
-    app:strokeWidth="0dp">
+    android:focusable="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +25,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/monate_charcoal"
+                android:textColor="@color/monate_text"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -38,7 +35,8 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="8dp"
                 android:text="▾"
-                android:textColor="@color/monate_red"
+                android:textColor="@color/monate_accent_text"
+                android:fontFamily="serif"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -47,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColor="@color/monate_grey"
+            android:textColor="@color/monate_muted"
             android:textSize="14sp"
             android:visibility="gone" />
     </LinearLayout>

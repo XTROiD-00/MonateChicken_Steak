@@ -1,25 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <TextView
+        style="@style/Monate.Eyebrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:text="ORDER HISTORY" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
         android:text="My Orders"
-        android:textColor="@color/monate_red"
+        android:textColor="@color/monate_text"
         android:textSize="26sp"
-        android:textStyle="bold" />
+        android:fontFamily="serif" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Track your orders and see your history"
-        android:textColor="@color/monate_grey"
+        android:textColor="@color/monate_muted"
         android:textSize="13sp" />
 
     <FrameLayout
@@ -40,8 +49,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="No orders yet 🍗\nPlace your first order from the menu."
-            android:textColor="@color/monate_grey"
+            android:text="No orders yet\nPlace your first order from the menu."
+            android:textColor="@color/monate_muted"
             android:textSize="16sp"
             android:visibility="gone" />
     </FrameLayout>

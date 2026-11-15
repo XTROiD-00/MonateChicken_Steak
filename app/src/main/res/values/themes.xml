@@ -1,14 +1,166 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.MonateChickenSteak" parent="Theme.Material3.Light.NoActionBar">
-        <item name="colorPrimary">@color/monate_red</item>
+
+    <!-- Dark brown / cream / terracotta, sharp corners: same look as the website -->
+    <style name="Theme.MonateChickenSteak" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/monate_accent</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorPrimaryContainer">@color/monate_red_dark</item>
-        <item name="colorSecondary">@color/monate_orange</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <item name="android:colorBackground">@color/monate_cream</item>
-        <item name="colorSurface">@color/white</item>
-        <item name="colorOnSurface">@color/monate_charcoal</item>
-        <item name="android:statusBarColor">@color/monate_red_dark</item>
+        <item name="colorPrimaryContainer">@color/monate_accent_dark</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
+        <item name="colorSecondary">@color/monate_tan</item>
+        <item name="colorOnSecondary">@color/monate_bg</item>
+        <item name="colorTertiary">@color/monate_success</item>
+        <item name="colorError">@color/monate_error</item>
+
+        <item name="android:colorBackground">@color/monate_bg</item>
+        <item name="colorSurface">@color/monate_surface</item>
+        <item name="colorSurfaceVariant">@color/monate_surface_alt</item>
+        <item name="colorOnSurface">@color/monate_text</item>
+        <item name="colorOnSurfaceVariant">@color/monate_muted</item>
+        <item name="colorOutline">@color/monate_border</item>
+        <item name="colorOutlineVariant">@color/monate_divider</item>
+        <item name="android:textColorPrimary">@color/monate_text</item>
+        <item name="android:textColorSecondary">@color/monate_muted</item>
+        <item name="android:textColorHint">@color/monate_muted</item>
+
+        <item name="android:statusBarColor">@color/monate_bg</item>
+        <item name="android:navigationBarColor">@color/monate_bg</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+
+        <!-- Web has square corners everywhere -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Monate.Square</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Monate.Square</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Monate.Square</item>
+
+        <item name="materialButtonStyle">@style/Widget.Monate.Button</item>
+        <item name="materialCardViewStyle">@style/Widget.Monate.Card</item>
+        <item name="bottomNavigationStyle">@style/Widget.Monate.BottomNav</item>
+        <item name="chipStyle">@style/Widget.Monate.Chip</item>
+        <item name="textInputStyle">@style/Widget.Monate.TextInputLayout</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="ShapeAppearance.Monate.Square" parent="">
+        <item name="cornerSize">0dp</item>
+    </style>
+    <style name="ShapeAppearance.Monate.Pill" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Primary button = web .hero-primary: terracotta, small bold uppercase -->
+    <style name="Widget.Monate.Button" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/monate_accent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="textAllCaps">true</item>
+        <item name="cornerRadius">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <!-- Secondary button = web .hero-secondary: 1px cream outline -->
+    <style name="Widget.Monate.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/outlined_button_stroke</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textColor">@color/monate_text</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="textAllCaps">true</item>
+        <item name="cornerRadius">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="Widget.Monate.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/monate_tan</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="textAllCaps">true</item>
+        <item name="cornerRadius">0dp</item>
+    </style>
+
+    <!-- Card = web .menu-card: dark-2 panel, thin cream border, no radius/shadow -->
+    <style name="Widget.Monate.Card" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/monate_surface</item>
+        <item name="cardCornerRadius">0dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/monate_divider</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Monate.Square</item>
+    </style>
+
+    <!-- Bottom nav = web navbar: near-black bar, cream/active, terracotta accent -->
+    <style name="Widget.Monate.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@color/monate_bg</item>
+        <item name="backgroundTint">@color/monate_bg</item>
+        <item name="itemIconTint">@color/nav_item_color</item>
+        <item name="itemTextColor">@color/nav_item_color</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.Monate.BottomNav.Indicator</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.Monate.NavLabel</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.Monate.NavLabel</item>
+        <item name="elevation">0dp</item>
+    </style>
+    <style name="Widget.Monate.BottomNav.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/monate_accent</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Monate.Square</item>
+    </style>
+    <style name="TextAppearance.Monate.NavLabel" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textSize">9sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Filter chip = web category tabs -->
+    <style name="Widget.Monate.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_bg</item>
+        <item name="chipStrokeColor">@color/chip_stroke</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/chip_text</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Monate.Square</item>
+    </style>
+
+    <!-- Inputs = web login inputs: dark field, thin border, tan on focus, square -->
+    <style name="Widget.Monate.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/input_stroke</item>
+        <item name="boxStrokeErrorColor">@color/monate_error</item>
+        <item name="errorTextColor">@color/monate_error</item>
+        <item name="boxCornerRadiusTopStart">0dp</item>
+        <item name="boxCornerRadiusTopEnd">0dp</item>
+        <item name="boxCornerRadiusBottomStart">0dp</item>
+        <item name="boxCornerRadiusBottomEnd">0dp</item>
+        <item name="hintTextColor">@color/monate_tan</item>
+        <item name="android:textColorHint">@color/monate_muted</item>
+    </style>
+    <style name="Widget.Monate.TextInputLayout.Dropdown" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxStrokeColor">@color/input_stroke</item>
+        <item name="boxStrokeErrorColor">@color/monate_error</item>
+        <item name="errorTextColor">@color/monate_error</item>
+        <item name="boxCornerRadiusTopStart">0dp</item>
+        <item name="boxCornerRadiusTopEnd">0dp</item>
+        <item name="boxCornerRadiusBottomStart">0dp</item>
+        <item name="boxCornerRadiusBottomEnd">0dp</item>
+        <item name="hintTextColor">@color/monate_tan</item>
+    </style>
+
+    <!-- Type: serif headings (web: Playfair Display), small tracked uppercase eyebrow labels -->
+    <style name="Monate.Heading" parent="">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textColor">@color/monate_text</item>
+    </style>
+    <style name="Monate.Eyebrow" parent="">
+        <item name="android:textColor">@color/monate_tan</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.2</item>
+        <item name="android:textAllCaps">true</item>
     </style>
 </resources>

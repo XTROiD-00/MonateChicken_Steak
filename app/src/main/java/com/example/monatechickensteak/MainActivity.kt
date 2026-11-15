@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.monatechickensteak.data.CartManager
+import com.example.monatechickensteak.data.Graph
 import com.example.monatechickensteak.data.SessionManager
 import com.example.monatechickensteak.databinding.ActivityMainBinding
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        Graph.init(this)
         SessionManager.init(this)
 
         val navHost = supportFragmentManager
@@ -36,7 +38,8 @@ class MainActivity : AppCompatActivity() {
         // Hide the bottom bar on the login and register screens
         navController.addOnDestinationChangedListener { _, destination, _ ->
             val hide = destination.id == R.id.loginFragment ||
-                    destination.id == R.id.registerFragment
+                    destination.id == R.id.registerFragment ||
+                    destination.id == R.id.forgotPasswordFragment
             binding.bottomNav.visibility = if (hide) View.GONE else View.VISIBLE
         }
 

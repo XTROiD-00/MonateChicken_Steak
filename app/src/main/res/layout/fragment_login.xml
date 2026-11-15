@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,39 +14,45 @@
         android:padding="24dp">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
             android:layout_marginTop="32dp"
-            android:text="🍗"
-            android:textSize="64sp" />
+            android:background="@drawable/bg_brand_mark"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="M"
+            android:textColor="@color/monate_text"
+            android:textSize="26sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
             android:letterSpacing="0.1"
             android:text="MONATE"
-            android:textColor="@color/monate_red"
+            android:textColor="@color/monate_text"
             android:textSize="32sp"
-            android:textStyle="bold" />
+            android:fontFamily="serif" />
 
         <TextView
+            style="@style/Monate.Eyebrow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chicken &amp; Steak"
-            android:textColor="@color/monate_grey"
-            android:textSize="16sp" />
+            android:layout_marginTop="6dp"
+            android:text="Chicken &amp; Steak" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:text="Welcome back! Log in to order."
-            android:textColor="@color/monate_charcoal"
+            android:textColor="@color/monate_text"
+            android:fontFamily="serif"
             android:textSize="18sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilEmail"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            style="@style/Widget.Monate.TextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -62,7 +69,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilPassword"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            style="@style/Widget.Monate.TextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -78,12 +85,34 @@
                 android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/tvForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:text="Forgot password?"
+            android:textColor="@color/monate_accent_text"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="4dp"
             android:text="Log in"
+            android:textSize="16sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGoogle"
+            style="@style/Widget.Monate.Button.Outlined"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:text="Continue with Google"
             android:textSize="16sp" />
 
         <ProgressBar
@@ -101,7 +130,7 @@
             android:gravity="center"
             android:minHeight="48dp"
             android:text="New here? Create an account"
-            android:textColor="@color/monate_red"
+            android:textColor="@color/monate_accent_text"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -110,7 +139,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Test account: demo@monate.co.za / Monate@123"
-            android:textColor="@color/monate_grey"
+            android:textColor="@color/monate_muted"
             android:textSize="12sp" />
     </LinearLayout>
 </ScrollView>

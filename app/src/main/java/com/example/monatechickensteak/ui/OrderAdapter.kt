@@ -39,7 +39,7 @@ class OrderAdapter(
             tvStatus.setTextColor(
                 ContextCompat.getColor(
                     context,
-                    if (delivered) R.color.monate_green else R.color.monate_red
+                    if (delivered) R.color.monate_success else R.color.monate_accent_text
                 )
             )
 
@@ -52,7 +52,7 @@ class OrderAdapter(
                 steps[index].setTextColor(
                     ContextCompat.getColor(
                         context,
-                        if (reached) R.color.monate_red else R.color.monate_grey
+                        if (reached) R.color.monate_accent_text else R.color.monate_muted
                     )
                 )
             }

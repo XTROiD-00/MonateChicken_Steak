@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Monate brand: flame red + charcoal + warm cream -->
-    <color name="monate_red">#D32F2F</color>
-    <color name="monate_red_dark">#9A0007</color>
-    <color name="monate_orange">#FF8F00</color>
-    <color name="monate_charcoal">#212121</color>
-    <color name="monate_grey">#757575</color>
-    <color name="monate_light_grey">#EEEEEE</color>
-    <color name="monate_cream">#FFF8F0</color>
-    <color name="monate_green">#2E7D32</color>
+    <!-- Monate brand, matched to the website (index, menu and events CSS variables):
+         dark brown + cream + terracotta + tan -->
+    <color name="monate_bg">#171310</color>            <!-- web var dark -->
+    <color name="monate_surface">#211A16</color>       <!-- web var dark-2 (cards) -->
+    <color name="monate_surface_alt">#34251E</color>   <!-- web var brown -->
+    <color name="monate_divider">#1AEEE2D1</color>     <!-- cream at 10% (web card borders) -->
+    <color name="monate_border">#26EEE2D1</color>      <!-- cream at 15% (web input borders) -->
+
+    <color name="monate_text">#EEE2D1</color>          <!-- web var cream -->
+    <color name="monate_muted">#A99A8C</color>         <!-- web var muted -->
+    <color name="monate_tan">#CDB89C</color>           <!-- web var beige / tan -->
+
+    <color name="monate_accent">#A9653F</color>        <!-- web var terracotta -->
+    <color name="monate_accent_text">#D58F66</color>   <!-- terracotta lightened for text on dark -->
+    <color name="monate_accent_dark">#874C30</color>   <!-- web var terracotta-dark -->
+    <color name="monate_success">#8FA66B</color>       <!-- web var olive, lightened for dark bg -->
+    <color name="monate_error">#E0907A</color>
+
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
 </resources>

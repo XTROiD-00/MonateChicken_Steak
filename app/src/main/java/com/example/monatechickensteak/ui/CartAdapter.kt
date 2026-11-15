@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.monatechickensteak.databinding.ItemCartBinding
 import com.example.monatechickensteak.model.CartItem
+import com.example.monatechickensteak.util.FoodImages
 import com.example.monatechickensteak.util.toRand
 
 class CartAdapter(
@@ -23,7 +24,7 @@ class CartAdapter(
     override fun onBindViewHolder(holder: VH, position: Int) {
         val line = getItem(position)
         with(holder.binding) {
-            tvEmoji.text = line.item.emoji
+            FoodImages.bind(ivPhoto, tvEmoji, line.item)
             tvName.text = line.item.name
             tvUnitPrice.text = "${line.item.price.toRand()} each"
             tvQty.text = line.quantity.toString()

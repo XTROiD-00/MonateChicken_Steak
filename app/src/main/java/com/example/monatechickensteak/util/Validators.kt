@@ -38,4 +38,10 @@ object Validators {
         password != confirm -> "Passwords do not match"
         else -> null
     }
+
+    fun resetCodeError(code: String): String? = when {
+        code.isBlank() -> "Enter the 6 digit code"
+        code.trim().length != 6 || !code.trim().all { it.isDigit() } -> "The code has 6 digits"
+        else -> null
+    }
 }

@@ -4,10 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="2dp"
-    app:strokeWidth="0dp">
+    android:layout_marginBottom="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,13 +13,26 @@
         android:orientation="horizontal"
         android:padding="12dp">
 
-        <TextView
-            android:id="@+id/tvEmoji"
+        <FrameLayout
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:background="@drawable/bg_emoji"
-            android:gravity="center"
-            android:textSize="30sp" />
+            android:background="@drawable/bg_emoji">
+
+            <TextView
+                android:id="@+id/tvEmoji"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:id="@+id/ivPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -37,14 +47,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="true"
-                android:textColor="@color/monate_grey"
+                android:textColor="@color/monate_muted"
                 android:textSize="10sp" />
 
             <TextView
                 android:id="@+id/tvName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/monate_charcoal"
+                android:textColor="@color/monate_text"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -54,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="2"
-                android:textColor="@color/monate_grey"
+                android:textColor="@color/monate_muted"
                 android:textSize="12sp" />
 
             <TextView
@@ -62,14 +72,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:textColor="@color/monate_red"
+                android:textColor="@color/monate_accent_text"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnAdd"
-            style="@style/Widget.Material3.Button.OutlinedButton"
+            style="@style/Widget.Monate.Button.Outlined"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add" />
